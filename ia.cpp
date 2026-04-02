@@ -22,6 +22,7 @@ IA::IA(vector<vector<char>>& tablero) {
     x = pos.first;
     y = pos.second;
 }
+Laberinto lab ;
 
 void IA::mover(vector<vector<char>>& tablero,bool tiene_movimientos) {
     // movimiento dummy (después metés BFS, A*, etc)
@@ -37,5 +38,4 @@ void IA::mover(vector<vector<char>>& tablero,bool tiene_movimientos) {
             break;
             }
     }
-    // acá después actualizás el mapa
 }

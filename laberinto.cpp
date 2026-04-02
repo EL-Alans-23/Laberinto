@@ -47,7 +47,7 @@ bool Laberinto::es_valido(int x, int y) {
 
 bool Laberinto::metaAlcanzada(vector<vector<char>>& tablero) {
     
-    if (encontrar_posicion(tablero,'A') == encontrar_posicion(tablero,'G'))
+    if (encontrar_posicion(tablero,'A') == encontrar_posicion(tablero,'S'))
         return true;
 
     return false;

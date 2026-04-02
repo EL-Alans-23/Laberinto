@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -20,4 +21,24 @@ pair <int,int> encontrar_posicion( vector<vector<char>>& tablero, char caracter)
         }
     }
     return {-1,-1};
+}
+
+
+string obtenerMapaRandom() {
+
+    vector<string> archivos = {
+        "data/mapa1.txt",
+        "data/mapa2.txt",
+        "data/mapa3.txt",
+        "data/mapa4.txt",
+        "data/mapa5.txt",
+        "data/mapa6.txt",
+        "data/mapa7.txt",
+        "data/mapa8.txt",
+        "data/mapa9.txt",
+        "data/mapa10.txt"
+    };
+
+    int indice = rand() % archivos.size();
+    return archivos[indice];
 }

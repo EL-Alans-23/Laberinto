@@ -3,17 +3,22 @@
 #include "laberinto.cpp"
 #include "ia.cpp"
 
+string obtenerMapaRandom();
 
 int main() {
+
+    srand(time(0));
+    string archivo = obtenerMapaRandom();
+
     Laberinto lab;
 
-    lab.cargarMapa("data/mapa.txt");
+    lab.cargarMapa(archivo);
     lab.mostrar();
     auto& tablero = lab.obtenerMapa();
     IA agente(tablero);
 
     // loop básico
-    while (!lab.metaAlcanzada()) {
+    while (!lab.metaAlcanzada(tablero)) {
         agente.mover(tablero,false);
         lab.mostrar();
     }
