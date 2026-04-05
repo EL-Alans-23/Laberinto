@@ -11,15 +11,17 @@ int main() {
     string archivo = obtenerMapaRandom();
 
     Laberinto lab;
+    
 
     lab.cargarMapa(archivo);
     lab.mostrar();
     auto& tablero = lab.obtenerMapa();
     IA agente(tablero);
 
-    // loop básico
+    cout<< "estado inicial" << endl;
+    lab.mostrar();
     while (!lab.metaAlcanzada(tablero)) {
-        agente.mover(tablero,false);
+        agente.mover(tablero);
         lab.mostrar();
     }
 

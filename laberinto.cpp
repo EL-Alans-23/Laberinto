@@ -19,12 +19,12 @@ public:
     vector<vector<char>>& obtenerMapa();
 };
 
-void Laberinto::cargarMapa(std::string ruta) {
-    std::ifstream archivo(ruta);
-    std::string linea;
+void Laberinto::cargarMapa(string ruta) {
+    ifstream archivo(ruta);
+    string linea;
 
     while (getline(archivo, linea)) {
-        std::vector<char> fila(linea.begin(), linea.end());
+        vector<char> fila(linea.begin(), linea.end());
         mapa.push_back(fila);
     }
 
@@ -35,9 +35,9 @@ void Laberinto::cargarMapa(std::string ruta) {
 void Laberinto::mostrar() {
     for (auto& fila : mapa) {
         for (char c : fila) {
-            std::cout << c;
+            cout << c;
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 }
 
